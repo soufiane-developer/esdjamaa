@@ -1,0 +1,475 @@
+@import url('https://fonts.googleapis.com/css?family=Muli:400,400i,700,700i');
+@import url('https://fonts.googleapis.com/css?family=Space+Mono');
+
+:root{
+    --color_button:rgb(88, 133, 197);
+    --font-size:5px;
+    /* --font-text: Arial, Helvetica, sans-serif; */
+    --font-text: Google Sans,arial,sans-serif;
+    --head_color:rgb(151, 157, 165) ;
+    --menu_color:#FFF;
+    --border_color:#fff;
+    --text-color:#fff;
+
+}
+
+body{
+    display: grid;
+    /* grid-auto-rows: minmax(200px , auto); */
+    font-family: var(--font-text);
+    grid-template-areas: 
+    "header header header header"
+    "pub pub pub pub"
+    "match-card match-card match-card match-card"
+    "ads-container ads-container ads-container ads-container"
+    "box box box box"
+   "products products products products"
+   "marquee-container marquee-container marquee-container marquee-container"
+   "login login login login"
+   "footer footer footer footer"
+    /* "page2 page_2 img_page_2 img_page_2"
+    "page2 page_2 img_page_2 img_page_2"
+    "page2 page_2 img_page_2 img_page_2"
+    "wrapper wrapper wrapper wrapper"
+    "wrapper wrapper wrapper wrapper"
+    "wrapper wrapper wrapper wrapper" */
+     /*"page_4 img_page_4 img_page_4 img_page_4"
+    "page_4 img_page_4 img_page_4 img_page_4"
+    "Signature Signature Signature Signature"
+    "page5 page5 page5 page5"
+    "logo_img_page_5 logo_img_page_5 logo_img_page_5 logo_img_page_5"
+    "page6 page6 page6 page6"*/
+     ;
+    
+}
+/******************* hedaer  ****************/
+/* .header{
+    background-color:var(--head_color) ;
+    border-radius: 5px;
+    grid-area: header;
+    height: 30%;
+} 
+
+.header_item {
+    display: flex;
+    width: 100%;
+    height: 59px;
+}
+.image_head{
+    width: 59px;
+}
+.image_head img{
+    width: 59px;
+    object-fit: contain;
+    
+}
+.menu_head {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+.menu_head ul{
+    display: -webkit-box;
+}
+.menu_head ul ol{
+    margin: 3px;
+}
+.menu_head ul ol a{
+    color:var(--menu_color) ;
+    padding: 14px 16px;
+    margin: 0 0 0 -40px;
+    text-decoration: none;
+}
+.menu_head ul ol a:hover{
+    border: .5px solid #fff;
+}
+.on_Sign{
+    border: .5px solid var(--border_color);
+}
+.on_Learn{
+    color: aliceblue;
+    background-color: rgb(22, 14, 84);
+} */
+ .header_top{
+    grid-area: header_top;
+
+ }
+    .header {
+        position: sticky;
+    top: 0%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #004080;
+      padding: 10px 20px;
+      grid-area: header;
+      z-index: 9;
+
+    }
+
+    .logo img {
+      mix-blend-mode: multiply;
+      width: 90px;
+      height: auto;
+    }
+
+    .menu ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    .menu ul li {
+      list-style: none;
+    }
+
+    .menu ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 14px;
+      padding: 5px 10px;
+      transition: background-color 0.3s;
+    }
+
+    .menu ul li a:hover {
+      opacity: .2;
+      border-radius: 3px;
+    }
+
+    /* Responsive for mobile */
+    @media (max-width: 768px) {
+      .header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .menu ul {
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+/********************* Page  1 ************************************/
+/* .page1{
+    grid-area: page1;
+    background-image: url(../img/PM_Spielplan_594c6_f_1920x1080.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: right;
+    width: 100%;
+}
+.page1_items{
+    width: 50%;
+    margin: 5% 0 0 48%;
+}
+.page1 h2{
+    text-align: center;
+    color: #4c3d3d;
+
+}
+.page1 p{
+    text-align: center;
+    color: #fff;
+}
+.page1 .button1, .button2{
+    border: none;
+    padding: 15px 25px;
+    background-color: #7fffd452;
+}
+ol a .home{
+    color: aqua;
+}
+.button_page1_items{
+    margin: 12% 0 0 30%;
+}
+
+.page1 .button2{
+    margin-left: 20%;
+} */
+ .team-products{
+    grid-area: products;
+ }
+/************************ Page  2 **************/
+.login{
+    grid-area: login;
+}
+
+/* ***************** Page  3 *************************/
+.marquee-container{
+   grid-area: marquee-container;
+}
+/*.wrapper{
+    grid-area: wrapper;
+    width: 100%; 
+    background-color: rgba(232, 229, 229, 0.962);
+    box-shadow: 10px 14px 18px 10px rgba(0, 0, 0, 0.426);
+    display: grid;
+    grid-auto-rows: minmax(200Px , auto);
+    grid-template-areas: 
+    "cont cont cont cont";
+    grid-gap:5px;
+    font-family: var(--font-text);
+}
+.cont{
+    display: flex;
+    grid-area: cont;
+    overflow-x: scroll;
+}
+.box{
+    border: 1px solid #fff;
+    width: 90%;
+    margin: 5px;
+    background-color: #a8a8a8;
+    box-shadow: 10px 14px 18px 10px rgba(0, 0, 0, 0.426);
+    height: 70%;
+    grid-area: box;
+}
+.box .img_box_page_3 img{
+        background-color: aliceblue;
+        width: 50%;
+        border-radius: 0 0 0 900px;
+        margin: -50px 0 0 177px;
+        direction: rtl;
+        height: 100%;
+}
+.box .img_box_page_3 img:hover{
+    width: 50%;
+    border-radius: 0;
+    transition-duration: .5s;
+    height: 100%;
+    margin: -50px 0 0 177px;
+}
+.h6_box_prix{
+    width: 15%;
+  height: 12%;
+  margin: 0;
+  background-color: aliceblue;
+  border-radius: 0 0 100px 10px;
+  padding: 10px;
+} */
+/*****************/
+.match-card{
+    grid-area: match-card;
+}
+/*.page_4{
+    grid-area: page_4;
+}
+.text_body_page4{
+    display: flex;
+    margin: 0 0 0 40px;
+}
+.text_page_4_1{
+    margin: 0 0 10px  50px;
+
+}
+.text_page_4_2{
+    margin: 0 0 10px  50px;
+
+}
+.img_page_4{
+    grid-area: img_page_4;
+}
+.page5{
+    grid-area: page5;
+    width: 90%;
+}
+.Signature{
+    grid-area: Signature;
+    text-align: center;
+}
+.page5 p{
+    text-align: center;
+    width: 100%;
+}
+.logo_img_page_5{
+    grid-area: logo_img_page_5;
+}
+.logo_img_page_5 img{
+    width: 2.5%;
+    margin: 0 0 0 49%;
+    border-radius: 50% 50% 50% 50%;
+}
+.logo_img_page_5 h6{
+text-align: center;
+}
+.page6{
+    grid-area: page6;
+}*/
+/******************************** Product **************************/
+
+.btn{
+ width: 100%; 
+ display: flex;
+ flex-wrap: wrap;
+}
+.Add, .Bay{
+  width: 40%;
+  margin: 10% 0 10% 6%;
+  border: none;
+}
+.Add{background-color:greenyellow;}
+.Bay{background-color:red;}
+.Add:hover{background-color:#c9dbae;}
+.Bay:hover{background-color:#d0a6a6;}
+.size{background: none;}
+.red,.blue,.yellow,.orange{width: 15%;color:white;}
+.red,.blue,.yellow,.orange,.size{border: none;}
+.red{
+  background-color: red;
+}
+.yellow{
+  background-color: yellow;
+}
+.orange{
+  background-color: orange;
+}
+.blue{
+  background-color: blue;
+}
+.all_items{
+display: flex;
+flex-wrap: wrap;
+gap: 15px;
+
+}
+.icon{
+display: flex;
+flex-wrap: wrap;
+/* margin: -9% 8%;
+height: 10%; */
+}
+.item_image{
+   border-radius: 50%;
+   background-color: aliceblue;
+}
+.item_image img {
+height: 50px;
+width: 50px;
+}
+
+/* .container{
+width: 15%;
+flex-grow: 1;
+}
+.container h3{
+text-align: center;
+background-color: white;
+} */
+/* .row{
+background-color: aliceblue;
+
+} */
+.wsk-cp-img a img{
+    width: 20px;
+    margin: 5px 0 0 211px;
+    position: absolute;
+}
+.wsk-cp-img img{
+width:100%;
+/* transition: all 0.2s ease-in-out; */
+border-radius:6px;
+aspect-ratio: 3/3;
+}
+.color{
+margin: 5px 0 0 0;
+}
+.tableu_info table {
+display: none;
+animation: all 2s;
+width: 100%;
+}
+.tableu_info td{
+width: 50%;
+border: 1px solid black;
+}
+.info_img{
+display: block;
+}
+.item_icon h6{
+text-align: center;
+}
+/******************  form login ******************/
+.form-container{
+}
+.form_login{
+    background-color: #4c3d3d;
+    padding: 15px  19px;
+    margin: 12px  0   0  20%;
+}
+.form_login h3{
+    text-align: center;
+}
+.img_form{
+    display: flex;
+    width: 30%;
+    margin-left: 35%;
+    justify-content: center;
+}
+.buttn{
+    display: flex;
+    justify-content: space-evenly;
+}
+.input_form input{
+    display: flex;
+    margin: 50px;
+    width: 88%;
+    height: 47px;
+    
+}
+.send_form{
+    background-color: #3dc959;
+    width: 170px;
+    height: 40px;
+    border: 1px solid #5dca73;
+}
+.cancel_form{
+    background-color: #c42828;
+    width: 170px;
+    height: 40px;
+    border: 1px solid #ca5d5d;
+}
+.send_form:hover, .cancel_form:hover{
+    opacity: 0.5;
+    border: none;
+}
+/******************************ads-container ****************/
+.ads-container{
+    grid-area: ads-container;
+}
+
+/******************************** foter **************************/
+
+.footer{
+    grid-area: footer;
+}
+/*.menu_footer{
+    width: 100%;
+}
+.up_line{
+    width: 100%;
+}
+.up_line h1{
+    width: 100%;
+    text-align: center;
+}
+.ul_footer{
+    margin: 0 0 0 400px;
+    width: 100%;
+}
+.foter_line{
+    margin: 130px 0 0 70px;
+   width: 100%;
+   border: 1px solid black;
+}
+.daown_line{
+     margin:0 0 0 100px;
+}
+
+.daown_line{
+    display: flex;
+}
+.ul_daown{
+    margin: 0 0 0 100px;
+}
+.ol_daown{
+    border-bottom: 1px solid black;
+} */
